@@ -1,2 +1,2 @@
-# Django_IMDB
-Making Apis similar to IMDB
+# Django_Ecommerce
+Making Apis similar to ecommerce
