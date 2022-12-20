@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Registeration</title>
+</head>
+<body>
+<center>
+    {% load crispy_forms_tags %}
+    <h1>{{message}}</h1>
+    <a href="http://127.0.0.1:8000/app/login/">Login Here</a>
+    <br/><br/>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+        {% if show %}
+        <label>
+        <input type="submit" value="Submit" class="btn btn-secondary" />
+        </label>
+        <style>
+        label, input {
+            display: block;
+            }
+
+        label {
+            margin-top: 10px;
+            }
+            </style>
+        {% endif %}
+
+    </form>
+
+
+</center>
+</body>
+</html>

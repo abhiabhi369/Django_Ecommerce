@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<center>
+
+    <form action="" method="POST">
+
+        {% if nologin %}
+        {{message}}
+            {% load crispy_forms_tags %}
+            {% csrf_token %}
+            {{form|crispy}}
+        <label>
+            <input type="submit" value="Submit" class="btn btn-secondary" />
+        </label>
+        {% endif %}
+        </form>
+        {% if login %}
+    <div class = "alert alert-success">
+        <p style="color:#008000">
+            {{message}}</p>
+    </div>
+        {% endif %}
+
+</center>
+</body>
+</html>
